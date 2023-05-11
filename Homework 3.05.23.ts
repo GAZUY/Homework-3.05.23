@@ -97,6 +97,64 @@ do {
       alert("ошибка в данных");
   }
 } while (confirm('Хотите ли вы решить еще один пример?'));
+
+
+
+ let input
+ do {
+   input = prompt('Введите число') as string
+ } while (input?.length<1)
+
+ const shift = +(prompt('На сколько разрядов сдвинуть число?') as string)
+ let newNumber = ''
+ for (let i=shift; i<input.length; i++) {
+  newNumber += input[i]
+ }
+ for (let i=shift-1; i>=0; i--) {
+   newNumber += input[i]
+ }
+ alert(newNumber)
+
+
+
+const day_of_the_week = [ "Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье"]
+let i = 0
+while (confirm(`${day_of_the_week[i]}.Хотите увидеть следующий день?`)){
+  i++
+    if (i>6){
+      i=0
+    }
+  }
+   
+
+//Вариант 1
+let plenty = 0
+  let multiplier1 = 2
+  let multiplier2 = 1
+for (multiplier1=2;multiplier1<=9;multiplier1 ++){
+  for (multiplier2=1;multiplier2<=10;multiplier2++){
+    plenty=multiplier1*multiplier2
+  document.write (' '+plenty+' ')
+  }
+}
+
+//Вариант 2
+
+let plenty = 0
+  let multiplier1 = 2
+  let multiplier2 = 1
+for (multiplier2=1;multiplier2<=10;multiplier2 ++){
+  plenty=multiplier1*multiplier2
+  document.write (' '+plenty+' ')
+  if (multiplier2==10){
+    multiplier2=0
+    multiplier1+=1
+  }
+  if (multiplier1==9){
+    break
+  }
+  
+}
 */
 
 
