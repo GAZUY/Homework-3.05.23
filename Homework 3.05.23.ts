@@ -1,4 +1,4 @@
-/*
+
 let smaller_range_number = +(prompt("введите меньшее число диапазона")as string)
 let a_larger_number_of_the_range = +(prompt("введите большее число диапазона")as string)
 let the_amount_of_the_range = 0; 
@@ -128,13 +128,13 @@ while (confirm(`${day_of_the_week[i]}.Хотите увидеть следующ
    
 
 //Вариант 1
-let plenty = 0
-  let multiplier1 = 2
-  let multiplier2 = 1
-for (multiplier1=2;multiplier1<=9;multiplier1 ++){
-  for (multiplier2=1;multiplier2<=10;multiplier2++){
-    plenty=multiplier1*multiplier2
-  document.write (' '+plenty+' ')
+let plenty1 = 0
+  let multiplier11 = 2
+  let multiplier21 = 1
+for (multiplier11=2;multiplier11<=9;multiplier11 ++){
+  for (multiplier21=1;multiplier21<=10;multiplier21++){
+    plenty1=multiplier11*multiplier21
+  document.write (' '+plenty1+' ')
   }
 }
 
@@ -155,6 +155,24 @@ for (multiplier2=1;multiplier2<=10;multiplier2 ++){
   }
   
 }
-*/
 
+
+let minimumRange=0
+let maximumRange=100
+let N 
+let midleNumber
+let userSign
+N = +(prompt('Введите число которое я буду отгадывать')as string)
+do {
+  midleNumber = Math.trunc((maximumRange+minimumRange)/2)
+  userSign = prompt (`Моё число ${midleNumber}. Укажите без кавычек. Ваше число больше ">", меньше "<" или равно"=" моему.`)
+  if (userSign == ">"){
+    minimumRange=midleNumber
+  }else if (userSign == "<"){
+    maximumRange=midleNumber
+  }else{
+    alert (`Ваше число ${midleNumber}`)
+    break
+  }
+}while(midleNumber!= N)
 
